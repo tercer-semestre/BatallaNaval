@@ -4,8 +4,8 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "tipo_usurio", schema = "public", catalog = "batalla_naval")
-public class TipoUsurioEntity {
+@Table(name = "tipo_barco", schema = "public", catalog = "battle_ship")
+public class TipoBarcoEntity {
     private short codigo;
     private String descripcion;
 
@@ -33,7 +33,7 @@ public class TipoUsurioEntity {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        TipoUsurioEntity that = (TipoUsurioEntity) o;
+        TipoBarcoEntity that = (TipoBarcoEntity) o;
         return codigo == that.codigo && Objects.equals(descripcion, that.descripcion);
     }
 

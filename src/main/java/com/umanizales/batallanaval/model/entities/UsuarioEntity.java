@@ -4,23 +4,12 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "usuario", schema = "public", catalog = "batalla_naval")
+@Table(name = "usuario", schema = "public", catalog = "battle_ship")
 public class UsuarioEntity {
-    private short id;
     private String correo;
-    private String contrasenia;
+    private String contraseña;
 
     @Id
-    @Column(name = "id")
-    public short getId() {
-        return id;
-    }
-
-    public void setId(short id) {
-        this.id = id;
-    }
-
-    @Basic
     @Column(name = "correo")
     public String getCorreo() {
         return correo;
@@ -31,13 +20,13 @@ public class UsuarioEntity {
     }
 
     @Basic
-    @Column(name = "contrasenia")
-    public String getContrasenia() {
-        return contrasenia;
+    @Column(name = "contraseña")
+    public String getContraseña() {
+        return contraseña;
     }
 
-    public void setContrasenia(String contrasenia) {
-        this.contrasenia = contrasenia;
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
     }
 
     @Override
@@ -45,11 +34,11 @@ public class UsuarioEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         UsuarioEntity that = (UsuarioEntity) o;
-        return id == that.id && Objects.equals(correo, that.correo) && Objects.equals(contrasenia, that.contrasenia);
+        return Objects.equals(correo, that.correo) && Objects.equals(contraseña, that.contraseña);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, correo, contrasenia);
+        return Objects.hash(correo, contraseña);
     }
 }

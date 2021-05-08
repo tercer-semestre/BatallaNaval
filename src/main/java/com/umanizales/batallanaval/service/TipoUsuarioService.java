@@ -1,7 +1,7 @@
 package com.umanizales.batallanaval.service;
 
 import com.umanizales.batallanaval.repository.TipoUsuarioRepository;
-import com.umanizales.batallanaval.model.entities.TipoUsurioEntity;
+import com.umanizales.batallanaval.model.entities.TipoUsuarioEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,12 +13,12 @@ public class TipoUsuarioService {
         this.tipoUsuarioRepository = tipoUsuarioRepository;
     }
 
-    public Iterable<TipoUsurioEntity> getAllTipoUsuarios()
+    public Iterable<TipoUsuarioEntity> getAllTipoUsuarios()
     {
         return tipoUsuarioRepository.findAll();
     }
 
-    public TipoUsurioEntity createTipoUsuario(TipoUsurioEntity tipoUsuario)
+    public TipoUsuarioEntity createTipoUsuario(TipoUsuarioEntity tipoUsuario)
     {
         return tipoUsuarioRepository.save(tipoUsuario);
     }

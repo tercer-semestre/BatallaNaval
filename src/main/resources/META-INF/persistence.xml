@@ -4,11 +4,9 @@
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
              version="2.2">
   <persistence-unit name="default">
-    <class>com.umanizales.batallanaval.model.entities.TipoUsurioEntity</class>
+    <class>com.umanizales.batallanaval.model.entities.BarcoEntity</class>
     <class>com.umanizales.batallanaval.model.entities.UsuarioEntity</class>
-    <class>com.umanizales.batallanaval.model.entities.BarcosEntity</class>
-    <class>com.umanizales.batallanaval.model.entities.JuegoEntity</class>
-    <class>com.umanizales.batallanaval.model.entities.JugadorEntity</class>
-    <class>com.umanizales.batallanaval.model.entities.TablerosEntity</class>
+    <class>com.umanizales.batallanaval.model.entities.TipoBarcoEntity</class>
+    <class>com.umanizales.batallanaval.model.entities.TipoUsuarioEntity</class>
   </persistence-unit>
 </persistence>

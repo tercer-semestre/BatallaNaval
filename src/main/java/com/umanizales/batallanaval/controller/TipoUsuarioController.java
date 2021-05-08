@@ -1,5 +1,6 @@
 package com.umanizales.batallanaval.controller;
-import com.umanizales.batallanaval.model.entities.TipoUsurioEntity;
+import com.umanizales.batallanaval.model.entities.TipoBarcoEntity;
+import com.umanizales.batallanaval.model.entities.TipoUsuarioEntity;
 import com.umanizales.batallanaval.service.TipoUsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -18,13 +19,13 @@ public class TipoUsuarioController {
     }
 
     @GetMapping
-    public Iterable<TipoUsurioEntity> getAllTipoUsuarios()
+    public Iterable<TipoUsuarioEntity> getAllTipoUsuarios()
     {
         return tipoUsuarioService.getAllTipoUsuarios();
     }
 
     @PostMapping
-    public TipoUsurioEntity createTipoUsuario(@RequestBody TipoUsurioEntity tipoUsuario)
+    public TipoUsuarioEntity createTipoUsuario(@RequestBody TipoUsuarioEntity tipoUsuario)
     {
         return tipoUsuarioService.createTipoUsuario(tipoUsuario);
     }
